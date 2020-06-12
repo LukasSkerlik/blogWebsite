@@ -1,0 +1,21 @@
+
+<%- include partials/header -%>
+
+<h2>Blog posts:</h2>
+
+<% collection.forEach(function(collectionItem) {%>
+  <p><%= collectionItem.title%></p>
+<%});%>
+
+<br>
+<br>
+
+<form class="item" action="/delete" method="post">
+  <label for="postTitle">Insert your title for deletion</label>
+  <input type="text" class="form-control" name="postTitle">
+  <br>
+  <input type="submit" class="btn btn-primary" value="Delete This Blog Post">
+</form>
+
+
+<%- include partials/footer -%>

@@ -1,0 +1,27 @@
+<form class="item" action="/delete" method="post">
+<label for="postTitle">Title</label>
+<input type="text" class="form-control" name="postTitle">
+  <input type="submit" class="btn btn-primary" value="Delete This Blog Post">
+</form>
+
+// -Z. add gitignore and push to github
+
+// A. cruD
+// 1. make the delete method work with typing with err and success messages DONE
+// 2. add the list of blog posts DONE
+// Optional, To be done when mongodbATLAS is integrated: add 5s redirect to home page to succes and failure pages, with the colt steele loading icon
+// 3. Make it so that clicking on a blogpost or on a button corresponding to it in the lit add it to the input text for search and delete
+// 4. add delete buttons for the individual posts at the end of the post
+
+// B. crUd
+// TBA
+
+// C. fix the footer to be sticky
+
+// D. redesign the look of the site
+
+// E. add mediaquerys hamburger menus etc
+
+// F. add mongodbAtlas
+
+// G. deploy to heroku
