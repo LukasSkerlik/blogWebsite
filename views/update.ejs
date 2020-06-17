@@ -10,12 +10,16 @@
 <br>
 <br>
 
-<form class="item" action="/delete" method="post">
-  <label for="postTitle">Insert your title for deletion</label>
-  <input type="text" class="form-control" name="postTitle">
+<h1>Update</h1>
+<form class="item" action="/update" method="post">
+  <label for="postTitle">Title</label>
+  <input type="text" class="form-control" name="postTitle" >
+  <label for="postBody">Post</label>
+  <textarea class="form-control" rows="5" name="postBody"></textarea>
   <br>
-  <input type="submit" class="btn btn-primary" value="Delete This Blog Post">
+  <input type="submit" class="btn btn-primary" value="Update">
 </form>
+
 
 
 <%- include partials/footer -%>

@@ -95,6 +95,14 @@ app.get("/deleteSuccess",function(req,res){
   res.render("deleteSuccess")
 });
 
+app.get("/updateFailure",function(req,res){
+  res.render("updateFailure")
+});
+
+app.get("/updateSuccess",function(req,res){
+  res.render("updateSuccess")
+});
+
 app.get("/posts/:postName", function(req,res){
   let  requestedTitle = _.lowerCase(req.params.postName);
   Post.find({title: requestedTitle}, function(err, results){
@@ -156,16 +164,16 @@ app.post("/update",function(req,res){
     } else {
 console.log(results);
 if (results.length == 0) {
-  res.redirect("/failure")
+  res.redirect("/updateFailure")
 } else {
-      Post.deleteMany ({ title: _.lowerCase(results[0].title)}, function(err){
+      Post.updateOne ({ title: _.lowerCase(results[0].title)}, { content: _.lowerCase(req.body.postBody)}, function(err){
         if (err){
           console.log(err);
         } else {
           console.log("deleted the specified post");
         }
       });
-      res.redirect("/success")
+      res.redirect("/updateSuccess")
 
     }}
   })
