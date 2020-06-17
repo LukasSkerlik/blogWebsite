@@ -73,14 +73,26 @@ app.get("/delete",function(req,res){
        res.render("delete", {collection: results});
        }
    })
-  });
-
-app.get("/failure",function(req,res){
-  res.render("failure")
 });
 
-app.get("/success",function(req,res){
-  res.render("success")
+  app.get("/update",function(req,res){
+
+     Post.find({}, function(err, results){
+       if (err){
+         // console.log(err);
+       } else {
+         // console.log(results);
+         res.render("update", {collection: results});
+         }
+     })
+});
+
+app.get("/deleteFailure",function(req,res){
+  res.render("deleteFailure")
+});
+
+app.get("/deleteSuccess",function(req,res){
+  res.render("deleteSuccess")
 });
 
 app.get("/posts/:postName", function(req,res){
@@ -119,6 +131,31 @@ app.post("/delete",function(req,res){
     } else {
 console.log(results);
 if (results.length == 0) {
+  res.redirect("/deleteFailure")
+} else {
+      Post.deleteMany ({ title: _.lowerCase(results[0].title)}, function(err){
+        if (err){
+          console.log(err);
+        } else {
+          console.log("deleted the specified post");
+        }
+      });
+      res.redirect("/deleteSuccess")
+
+    }}
+  })
+
+});
+
+
+// -------------------------------------------------------------------Update of CRUD------------------------------------------------------------
+app.post("/update",function(req,res){
+  Post.find({ title: _.lowerCase(req.body.postTitle)}, function(err, results){
+    if (err){
+      // console.log(err);
+    } else {
+console.log(results);
+if (results.length == 0) {
   res.redirect("/failure")
 } else {
       Post.deleteMany ({ title: _.lowerCase(results[0].title)}, function(err){
@@ -135,16 +172,9 @@ if (results.length == 0) {
 
 });
 
-function handleClick() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
 
 
-
-
-
-
-
+// -------------------------------------------------------------------server listen------------------------------------------------------------
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");

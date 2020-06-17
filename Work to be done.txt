@@ -11,10 +11,12 @@
 // 2. add the list of blog posts DONE
 // Optional, To be done when mongodbATLAS is integrated: add 5s redirect to home page to succes and failure pages, with the colt steele loading icon N/A
 // 3. Make it so that clicking on a blogpost or on a button corresponding to it in the lit add it to the input text for search and delete N/A
-// 4. add delete buttons for the individual posts at the end of the post
+// 4. add delete buttons for the individual posts at the end of the post DONE
 
 // B. crUd
-// TBA
+// 1. make a page called update.ejs, similar to compose, but with the same list as delete.ejs
+// 2. make it so that the content updates the the post according to title using updateOne or updateMany... with err and succes messages
+// 3. add update button to each post that renders update.ejs with title and current content parsed in input fields
 
 // C. fix the footer to be sticky
 
