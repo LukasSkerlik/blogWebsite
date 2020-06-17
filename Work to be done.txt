@@ -9,8 +9,8 @@
 // A. cruD
 // 1. make the delete method work with typing with err and success messages DONE
 // 2. add the list of blog posts DONE
-// Optional, To be done when mongodbATLAS is integrated: add 5s redirect to home page to succes and failure pages, with the colt steele loading icon
-// 3. Make it so that clicking on a blogpost or on a button corresponding to it in the lit add it to the input text for search and delete
+// Optional, To be done when mongodbATLAS is integrated: add 5s redirect to home page to succes and failure pages, with the colt steele loading icon N/A
+// 3. Make it so that clicking on a blogpost or on a button corresponding to it in the lit add it to the input text for search and delete N/A
 // 4. add delete buttons for the individual posts at the end of the post
 
 // B. crUd
@@ -25,3 +25,5 @@
 // F. add mongodbAtlas
 
 // G. deploy to heroku
+
+// H. add a readme to here and github

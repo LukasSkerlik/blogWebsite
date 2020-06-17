@@ -135,6 +135,10 @@ if (results.length == 0) {
 
 });
 
+function handleClick() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+
 
 
 

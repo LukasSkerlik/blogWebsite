@@ -4,7 +4,10 @@
 <h1><%= collection.title%></h1>
 <p><%= collection.content%></p>
 
-
+<form class="item" action="/delete" method="post">
+  <input type="text" class="form-control hidden" name="postTitle" value="<%= collection.title%>">
+  <input type="submit" class="btn btn-primary" value="X">
+</form>
 
 
 <%- include partials/footer -%>
