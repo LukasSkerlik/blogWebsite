@@ -16,7 +16,7 @@
 // B. crUd
 // 1. make a page called update.ejs, similar to compose, but with the same list as delete.ejs DONE
 // 2. make it so that the content updates the the post according to title using updateOne or updateMany... with err and succes messages DONE
-// 3. add update button to each post that renders update.ejs with title and current content parsed in input fields
+// 3. add update button to each post that renders update.ejs with title and current content parsed in input fields DONE
 
 // C. fix the footer to be sticky
 

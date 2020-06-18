@@ -1,21 +1,16 @@
 
 <%- include partials/header -%>
 
-<h2>Blog posts:</h2>
+<h2><%= collection.title%></h2>
 
-<% collection.forEach(function(collectionItem) {%>
-  <p><%= collectionItem.title%></p>
-<%});%>
 
 <br>
 <br>
 
-<h1>Update</h1>
 <form class="item" action="/update" method="post">
-  <label for="postTitle">Title</label>
-  <input type="text" class="form-control" name="postTitle" >
+  <input type="text" class="form-control hidden" name="postTitle" value="<%= collection.title%>">
   <label for="postBody">Post</label>
-  <textarea class="form-control" rows="5" name="postBody"></textarea>
+  <textarea class="form-control" rows="5" name="postBody"><%= collection.content%></textarea>
   <br>
   <input type="submit" class="btn btn-primary" value="Update">
 </form>

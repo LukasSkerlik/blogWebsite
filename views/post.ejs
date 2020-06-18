@@ -8,7 +8,7 @@
   <input type="text" class="form-control hidden" name="postTitle" value="<%= collection.title%>">
   <input type="submit" class="btn btn-primary" value="X">
 </form>
-<form class="item" action="/update" method="get">
+<form class="item" action="/update/<%= collection.title%>" method="get">
   <input type="text" class="form-control hidden" name="postTitle" value="<%= collection.title%>">
   <input type="submit" class="btn btn-primary" value="update">
 </form>

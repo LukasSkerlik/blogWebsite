@@ -1,4 +1,3 @@
-//jshint esversion:6
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -75,17 +74,7 @@ app.get("/delete",function(req,res){
    })
 });
 
-  app.get("/update",function(req,res){
 
-     Post.find({}, function(err, results){
-       if (err){
-         // console.log(err);
-       } else {
-         // console.log(results);
-         res.render("update", {collection: results});
-         }
-     })
-});
 
 app.get("/deleteFailure",function(req,res){
   res.render("deleteFailure")
@@ -112,6 +101,19 @@ app.get("/posts/:postName", function(req,res){
     } else {
       console.log(results[0]);
       res.render ("post", {collection: results[0]})
+      }
+  })
+});
+
+app.get("/update/:postName",function(req,res){
+  let  requestedTitle = _.lowerCase(req.params.postName);
+  Post.find({title: requestedTitle}, function(err, results){
+    if (err){
+      console.log(err);
+      res.redirect("/");
+    } else {
+      console.log(results[0]);
+      res.render ("update", {collection: results[0]})
       }
   })
 });
@@ -166,11 +168,11 @@ console.log(results);
 if (results.length == 0) {
   res.redirect("/updateFailure")
 } else {
-      Post.updateOne ({ title: _.lowerCase(results[0].title)}, { content: _.lowerCase(req.body.postBody)}, function(err){
+      Post.updateOne ({ title: _.lowerCase(results[0].title)}, { content: req.body.postBody}, function(err){
         if (err){
           console.log(err);
         } else {
-          console.log("deleted the specified post");
+          console.log("updated the specified post");
         }
       });
       res.redirect("/updateSuccess")
