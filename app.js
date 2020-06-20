@@ -48,6 +48,9 @@ app.get("/",function(req,res){
    })
   });
 
+  app.get("/csstestpage",function(req,res){
+    res.render("csstestpage", {aboutContent: aboutContent})
+  });
 
 
 app.get("/about",function(req,res){

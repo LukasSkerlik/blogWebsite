@@ -6,21 +6,28 @@
 
 // -Z. add gitignore and push to github
 
-// A. cruD
+// A. cruD DONE
 // 1. make the delete method work with typing with err and success messages DONE
 // 2. add the list of blog posts DONE
 // Optional, To be done when mongodbATLAS is integrated: add 5s redirect to home page to succes and failure pages, with the colt steele loading icon N/A
 // 3. Make it so that clicking on a blogpost or on a button corresponding to it in the lit add it to the input text for search and delete N/A
 // 4. add delete buttons for the individual posts at the end of the post DONE
 
-// B. crUd
+// B. crUd DONE
 // 1. make a page called update.ejs, similar to compose, but with the same list as delete.ejs DONE
 // 2. make it so that the content updates the the post according to title using updateOne or updateMany... with err and succes messages DONE
-// 3. add update button to each post that renders update.ejs with title and current content parsed in input fields DONE
+// 3. add update button to each post that renders update.ejs with title and current content parsed in input field DONE
 
 // C. fix the footer to be sticky
+// 1. use flexbox DONE
+// 1a. (optional) do the same for your other site (noteApp)
 
 // D. redesign the look of the site
+// 1. pick a color scheme
+// 2. pick a name
+// 3. (optional) redesign footer (small thing, like maybe add font awesome or something)
+// 4. favicon
+// 5. scss for vendor prefixex and main color etc
 
 // E. add mediaquerys hamburger menus etc
 
@@ -29,3 +36,4 @@
 // G. deploy to heroku
 
 // H. add a readme to here and github
+// known bug, because of lodash functionality when it comes to lowercase function, it is currently impossible to add special characters to blog titles
