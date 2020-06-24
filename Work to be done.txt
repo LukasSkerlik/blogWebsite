@@ -1,8 +1,3 @@
-<form class="item" action="/delete" method="post">
-<label for="postTitle">Title</label>
-<input type="text" class="form-control" name="postTitle">
-  <input type="submit" class="btn btn-primary" value="Delete This Blog Post">
-</form>
 
 // -Z. add gitignore and push to github
 
@@ -18,22 +13,31 @@
 // 2. make it so that the content updates the the post according to title using updateOne or updateMany... with err and succes messages DONE
 // 3. add update button to each post that renders update.ejs with title and current content parsed in input field DONE
 
-// C. fix the footer to be sticky
+// C. fix the footer to be sticky DONE
 // 1. use flexbox DONE
 // 1a. (optional) do the same for your other site (noteApp)
 
 // D. redesign the look of the site
-// 1. pick a color scheme
-// 2. pick a name
-// 3. (optional) redesign footer (small thing, like maybe add font awesome or something)
-// 4. favicon
-// 5. scss for vendor prefixex and main color etc
+// 1. pick a color scheme DONE
+// 2. pick a name DONE
+// 3. redesign header (mostly positioning) DONE
+// 4. reposition main text area DONE
+// 5. favicon DONE
+// 6. about page starting content to be the definition of pilot DONE
+// 7. reposition the buttons for update and delete on post pages and give them a different color DONE
 
 // E. add mediaquerys hamburger menus etc
+// 1. remake the site with the holy grail responsivness
+// 2. add hamburger menu
+// 3. scss for vendor prefixex
+// 4. refrator page via scss (don't spend more than 30 min on this please)
+// 5. get rid of csstestpage
+
+// E. b)
 
 // F. add mongodbAtlas
 
 // G. deploy to heroku
 
 // H. add a readme to here and github
-// known bug, because of lodash functionality when it comes to lowercase function, it is currently impossible to add special characters to blog titles
+// known bug, because of lodash functionality when it comes to lowercase function, it is currently impossible to add special characters to blog titles resolving in process

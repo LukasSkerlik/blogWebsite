@@ -1,18 +1,23 @@
 <%- include partials/header -%>
 
 
+<div class="post-page">
 
-<h1><%= collection.title%></h1>
-<p><%= collection.content%></p>
+<div class="post-content">
+  <h1><%= collection.title%></h1>
+  <p class="post-content-individual"><%= collection.content%></p>
+</div>
+<div class="buttons-post-page">
+  <form class="item" action="/update/<%= collection.title%>" method="get">
+    <input type="text" class="form-control hidden" name="postTitle" value="<%= collection.title%>">
+    <input type="submit" class="btn btn-info" value="Update">
+  </form>
+  <form class="item" action="/delete" method="post">
+    <input type="text" class="form-control hidden" name="postTitle" value="<%= collection.title%>">
+    <input type="submit" class="btn btn-danger" value="Delete this post">
+  </form>
+</div>
 
-<form class="item" action="/delete" method="post">
-  <input type="text" class="form-control hidden" name="postTitle" value="<%= collection.title%>">
-  <input type="submit" class="btn btn-primary" value="X">
-</form>
-<form class="item" action="/update/<%= collection.title%>" method="get">
-  <input type="text" class="form-control hidden" name="postTitle" value="<%= collection.title%>">
-  <input type="submit" class="btn btn-primary" value="update">
-</form>
-
+</div>
 
 <%- include partials/footer -%>

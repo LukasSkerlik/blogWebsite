@@ -3,6 +3,7 @@ html {
   width: 100%;
 }
 body {
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,18 +20,35 @@ main {
     flex-basis: 800px;
 }
 aside {
-  background-color: lightblue;
-  flex: 1 1 20%;
-  border: 2px solid black;
+  flex: 1 1 12.5%;
+  /* border: 2px solid black; */
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 section {
-  background-color: teal;
-  flex: 1 1 60%;
-  border: 2px solid black;
+  flex: 1 0 75%;
+  padding: 2% 6%;
+  /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
+  min-height: 80vh;
 
+}
+p{
+  font-size: 16px;
+}
+.center{
+  text-align: center;
+}
+.ad {
+  font-size: 80px;
+  color: lightgrey;
+}
+.ads {
+  font-size: 30px;
+  color: lightgrey;
 }
 .navbar {
     padding-top: 15px;
@@ -40,9 +58,17 @@ section {
     font-size: 12px;
     letter-spacing: 5px;
     flex: 0 0 8vh;
+    background-color: #63b7af;
+    color: white;
+}
+.navbar-nav  li a {
+    color: white !important;
+}
+.navbar-brand {
+  color: white !important;
 }
 .navbar-nav  li a:hover {
-    color: #1abc9c !important;
+    color: lightgrey !important;
 }
 
 .footer {
@@ -50,11 +76,28 @@ section {
 	text-align: center;
 	width: 100%;
 	flex: 0 0 8vh;
-	background-color: #1abc9c;
+	background-color: #d4f3ef;
 }
 
 .footer p {
 	margin-top: 25px;
 	font-size: 12px;
-  color: #fff;
+  color: grey;
+}
+.italic{
+  font-style: italic;
+}
+.post-content-individual{
+  white-space: pre-wrap;
+}
+.buttons-post-page{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.post-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 75vh;
 }

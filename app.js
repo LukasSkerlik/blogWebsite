@@ -4,8 +4,9 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require ("mongoose");
 const _ = require ("lodash");
+const favicon = require('serve-favicon');
 
-const homeStartingContent = "Welcome to my blog that talks about... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+const homeStartingContent = "Welcome to my blog that talks about...  YOUR TEXT HERE. PLACEHOLDER.";
 const aboutContent = "This is blog site with full CRUD capabilities.";
 const contactContent = "Please Contact me @";
 
@@ -15,6 +16,10 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+
+
+
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 mongoose.connect('mongodb://localhost:27017/blogDB', {useNewUrlParser: true, useUnifiedTopology: true });
 
