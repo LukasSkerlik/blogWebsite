@@ -1,4 +1,4 @@
-
+// ---------------------------------------------------------------------require packages------------------------------------------------------------
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -7,9 +7,8 @@ const _ = require ("lodash");
 const favicon = require('serve-favicon');
 var path = require('path');
 
-const homeStartingContent = "Welcome to my blog that talks about...  YOUR TEXT HERE. PLACEHOLDER.";
-const aboutContent = "This is blog site with full CRUD capabilities.";
-const contactContent = "Please Contact me @";
+// ---------------------------------------------------------------------set up express-------------------------------------------------------------
+
 
 const app = express();
 
@@ -17,12 +16,14 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+// -------------------------------------------------------------set up favicon and js for navbar-----------------------------------------------------
 
 app.use(express.static(path.join(__dirname, 'js')))
-
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
+// ---------------------------------------------------------------set up mongoose and schema--------------------------------------------------------
 
 mongoose.connect('mongodb://localhost:27017/blogDB', {useNewUrlParser: true, useUnifiedTopology: true });
+
 
 const postSchema = new mongoose.Schema ({
   title: {
@@ -36,6 +37,10 @@ const postSchema = new mongoose.Schema ({
 });
 
 const Post = mongoose.model("Post", postSchema);
+// ------------------------------------------------------------Set home, about and contact here-----------------------------------------------------
+const homeStartingContent = "Welcome to my blog that talks about...  YOUR TEXT HERE. PLACEHOLDER.";
+const aboutContent = "This is blog site with full CRUD capabilities.";
+const contactContent = "Please Contact me @";
 
 
 
