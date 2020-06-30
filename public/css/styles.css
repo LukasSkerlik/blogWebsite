@@ -1,7 +1,12 @@
+
+/* ------------------------------------------------------------------------ global ---------------------------------------------------------------*/
+
 html {
   height: 100%;
   width: 100%;
 }
+
+
 body {
   background-color: #f2f2f2;
   display: flex;
@@ -11,48 +16,9 @@ body {
   margin: 0;
   width: 100%;
 }
-
-main {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-basis: 800px;
-}
-aside {
-  flex: 1 1 12.5%;
-  /* border: 2px solid black; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-section {
-  flex: 1 0 75%;
-  padding: 2% 6%;
-  /* border: 2px solid black; */
-  display: flex;
-  flex-direction: column;
-  min-height: 80vh;
-
-}
-p{
-  font-size: 16px;
-}
-.center{
-  text-align: center;
-}
-.ad {
-  font-size: 80px;
-  color: lightgrey;
-}
-.ads {
-  font-size: 30px;
-  color: lightgrey;
-}
+/* -------------------------------------------------------------------------header/navbar --------------------------------------------------------*/
 .navbar {
     padding-top: 15px;
-    padding-bottom: 15px;
     border: 0;
     margin-bottom: 0;
     font-size: 12px;
@@ -70,12 +36,53 @@ p{
 .navbar-nav  li a:hover {
     color: lightgrey !important;
 }
+/* ---------------------------------------------------------------main part of site including ads -------------------------------------------------*/
 
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 800px;
+}
+/* ---------------------------------------------------------------main part of site excluding ads -------------------------------------------------*/
+section {
+  flex: 1 0 75%;
+  padding: 2% 6%;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+
+}
+
+
+
+/* ----------------------------------------------------------------------------ad --------------------------------------------------------------*/
+.ad {
+  font-size: 80px;
+  color: #84a9ac;
+}
+.ads {
+  font-size: 30px;
+  color: #84a9ac;
+}
+aside {
+  flex: 0 0 12.5%;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e7dfd5;
+}
+
+/* -------------------------------------------------------------------------footer --------------------------------------------------------------*/
 .footer {
 
 	text-align: center;
 	width: 100%;
-	flex: 0 0 8vh;
+	flex: 1 0 8vh;
 	background-color: #d4f3ef;
 }
 
@@ -84,12 +91,24 @@ p{
 	font-size: 12px;
   color: grey;
 }
+/* -------------------------------------------------------------------------basic --------------------------------------------------------------*/
+
 .italic{
   font-style: italic;
+}
+.center{
+  text-align: center;
 }
 .post-content-individual{
   white-space: pre-wrap;
 }
+p{
+  font-size: 16px;
+}
+#mobileNavbar {
+  display: none;
+}
+/* -------------------------------------------------------------------------post button positioning -----------------------------------------------*/
 .buttons-post-page{
   display: flex;
   flex-direction: row;
@@ -100,4 +119,42 @@ p{
   flex-direction: column;
   justify-content: space-between;
   min-height: 75vh;
+}
+/* -------------------------------------------------------------------------responsivness----------------------------------------------------------*/
+@media screen and (max-width:992px) {
+  main {
+    flex-direction: column;
+  }
+  section {
+    flex: 1 0 80%;
+  }
+
+  aside {
+    flex-direction: row;
+    flex: 0 0 50px;
+    padding-top: 10px;
+  }
+  .ads {
+    font-size: 20px;
+  }
+  .ad {
+    font-size: 20px;
+  }
+  /* --------------------------------------------------------------------responsivness-navbar------------------------------------------------------*/
+  #mobileNavbar  {
+    color: white;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    font-size: 20px;
+  }
+  #myLinks {
+    display: none;
+  }
+}
+@media screen and (min-width:993px) {
+  #myLinks {
+    display: block;
+  }
 }

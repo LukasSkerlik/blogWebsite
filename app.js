@@ -5,6 +5,7 @@ const ejs = require("ejs");
 const mongoose = require ("mongoose");
 const _ = require ("lodash");
 const favicon = require('serve-favicon');
+var path = require('path');
 
 const homeStartingContent = "Welcome to my blog that talks about...  YOUR TEXT HERE. PLACEHOLDER.";
 const aboutContent = "This is blog site with full CRUD capabilities.";
@@ -17,7 +18,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-
+app.use(express.static(path.join(__dirname, 'js')))
 
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 

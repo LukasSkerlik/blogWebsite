@@ -17,7 +17,7 @@
 // 1. use flexbox DONE
 // 1a. (optional) do the same for your other site (noteApp)
 
-// D. redesign the look of the site
+// D. redesign the look of the site DONE
 // 1. pick a color scheme DONE
 // 2. pick a name DONE
 // 3. redesign header (mostly positioning) DONE
@@ -27,11 +27,12 @@
 // 7. reposition the buttons for update and delete on post pages and give them a different color DONE
 
 // E. add mediaquerys hamburger menus etc
-// 1. remake the site with the holy grail responsivness
-// 2. add hamburger menu
+// 1. add hamburger menu DONE
+// 2. remake the site with the holy grail responsivness DONE
 // 3. scss for vendor prefixex
 // 4. refrator page via scss (don't spend more than 30 min on this please)
 // 5. get rid of csstestpage
+// retitle the page
 
 
 
