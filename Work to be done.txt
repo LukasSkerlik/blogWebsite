@@ -32,6 +32,7 @@
 // 3. scss for vendor prefixex
 // 4. refrator page via scss (don't spend more than 30 min on this please)
 // 5. get rid of csstestpage
+// 6. add link to your portfolio page on copyright and CONTACT
 // retitle the page
 
 
