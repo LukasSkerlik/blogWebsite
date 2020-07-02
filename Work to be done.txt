@@ -37,9 +37,13 @@
 
 
 
-// F. add mongodbAtlas
+// F. add mongodbAtlas DONE
 
 // G. deploy to heroku
+// 1. use the documentation to ready project for heroku
+// 2. do the same for your react note app
+
 
 // H. add a readme to here and github
 // known bug, because of lodash functionality when it comes to lowercase function, it is currently impossible to add special characters to blog titles resolving in process
+// update readme for this one and react note app with tech stack

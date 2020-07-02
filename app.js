@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'js')))
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 // ---------------------------------------------------------------set up mongoose and schema--------------------------------------------------------
 
-mongoose.connect('mongodb://localhost:27017/blogDB', {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://admin-slukas:Test111@cluster0blog.4ln9i.mongodb.net/blogDB', {useNewUrlParser: true, useUnifiedTopology: true });
 
 
 const postSchema = new mongoose.Schema ({
