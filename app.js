@@ -40,7 +40,7 @@ const Post = mongoose.model("Post", postSchema);
 // ------------------------------------------------------------Set home, about and contact here-----------------------------------------------------
 const homeStartingContent = "Welcome to my blog that talks about...  YOUR TEXT HERE. PLACEHOLDER.";
 const aboutContent = "This is blog site with full CRUD capabilities.";
-const contactContent = "Please Contact me @";
+const contactContent = "Please Contact me @ skerlik.lukas@gmail.com";
 
 
 
@@ -57,10 +57,6 @@ app.get("/",function(req,res){
        res.render("home", {homeContent: homeStartingContent, collection: results});
        }
    })
-  });
-
-  app.get("/csstestpage",function(req,res){
-    res.render("csstestpage", {aboutContent: aboutContent})
   });
 
 

@@ -29,21 +29,20 @@
 // E. add mediaquerys hamburger menus etc
 // 1. add hamburger menu DONE
 // 2. remake the site with the holy grail responsivness DONE
-// 3. scss for vendor prefixex
-// 4. refrator page via scss (don't spend more than 30 min on this please)
-// 5. get rid of csstestpage
-// 6. add link to your portfolio page on copyright and CONTACT
-// retitle the page
+// 3. scss for vendor prefixex DONE
+// 4. refrator page via scss (don't spend more than 30 min on this please) DONE (wasn't really needed)
+// 5. get rid of csstestpage DONE
+// 6. add link to your portfolio page to contact page
+// retitle the page DONE
 
 
 
 // F. add mongodbAtlas DONE
 
-// G. deploy to heroku
-// 1. use the documentation to ready project for heroku
-// 2. do the same for your react note app
+// G. deploy to heroku DONE
+// 1. use the documentation to ready project for heroku DONE
 
 
-// H. add a readme to here and github
+// H. add a readme to here and github DONE
 // known bug, because of lodash functionality when it comes to lowercase function, it is currently impossible to add special characters to blog titles resolving in process
-// update readme for this one and react note app with tech stack
+// update readme for this one and react note app with tech stack DONE
