@@ -1,14 +1,21 @@
 <%- include partials/header -%>
 
-<div class="center">
+<div class="center divHome">
   <h1>Home</h1>
   <p><%=homeContent%></p>
 </div>
 
 <% collection.forEach(function(collectionItem) {%>
-  <h1><%= collectionItem.title%></h1>
-  <p class="post-snippet"><%= collectionItem.content.substring(0,100)%> ... <a href="/posts/<%= collectionItem.title%>">Read More!</a></p>
+
+
+
+<div class="card">
+  <div class="cardContainer">
+    <h2><b><%= collectionItem.title%></b></h2>
+    <br />
+    <p><%= collectionItem.content.substring(0,600)%> ... <a href="/posts/<%= collectionItem.title%>">Read More!</a></p>
+  </div>
+</div>
+
 <%});%>
-
-
 <%- include partials/footer -%>

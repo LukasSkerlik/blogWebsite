@@ -64,7 +64,7 @@ main {
       flex-basis: 800px;
 }
 
-/* ---------------------------------------------------------------main part of site excluding ads -------------------------------------------------*/
+/* ---------------------------------------------------------------main part of site excluding ads -----------------------------------------------*/
 section {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 75%;
@@ -81,15 +81,41 @@ section {
   min-height: 80vh;
 }
 
+.divHome {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+/* -------------------------------------------------------------------------card ----------------------------------------------------------------*/
+.card {
+  /* Add shadows to create the "card" effect */
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 #63b7af;
+          box-shadow: 0 8px 16px 0 #63b7af;
+}
+
+/* Add some padding inside the card container */
+.cardContainer {
+  padding: 2px 16px;
+}
+
 /* ----------------------------------------------------------------------------ad --------------------------------------------------------------*/
 .ad {
   font-size: 80px;
-  color: #84a9ac;
+  color: #e7dfd5;
 }
 
 .ads {
   font-size: 30px;
-  color: #84a9ac;
+  color: #e7dfd5;
 }
 
 aside {
@@ -110,7 +136,6 @@ aside {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #e7dfd5;
 }
 
 /* -------------------------------------------------------------------------footer --------------------------------------------------------------*/
@@ -150,7 +175,7 @@ p {
   display: none;
 }
 
-/* -------------------------------------------------------------------------post button positioning -----------------------------------------------*/
+/* -------------------------------------------------------------------------post button positioning --------------------------------------------*/
 .buttons-post-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,7 +203,7 @@ p {
   min-height: 75vh;
 }
 
-/* -------------------------------------------------------------------------responsivness----------------------------------------------------------*/
+/* -------------------------------------------------------------------------responsivness--------------------------------------------------------*/
 @media screen and (max-width: 992px) {
   main {
     -webkit-box-orient: vertical;
